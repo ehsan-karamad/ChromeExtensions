@@ -4,7 +4,7 @@
   "manifest_version": 2,
   "background": {
     "persistent": false,
-    "scripts": ["background.js", "message_manager.js", "messages.js"]
+    "scripts": ["background.js", "common.js"]
   },
   "options_ui": {
     "page": "options.html",
@@ -14,11 +14,12 @@
     {
       "matches": ["<all_urls>"],
       "css": ["overlay.css"],
-      "js": ["messages.js", "message_manager.js", "image_finder.js"],
+      "js": ["common.js", "content.js"],
       "run_at": "document_end"
     }
   ],
   "browser_action": {
-  }
+  },
+  "permissions": ["activeTab", "tabs"]
 }
 

@@ -1,0 +1,21 @@
+{
+  "name": "SeCDoC",
+  "description": "Self Chromium Document-or: A simple extension which helps you create your own version of chromium project documentation.",
+  "manifest_version": 2,
+  "background":
+  {
+    "scripts": ["messages.js", "background"]
+  },
+  "content_scripts":
+  {
+    "matches": ["https://code.google.com/p/chromium/*"],
+      "css": ["styles.css"],
+      "js": ["jquery-2.1.4.js", "messages.js", "ui-parsel.js", "gdrive.js"],
+      "run_at": "document_end"
+  },
+  "options_ui":
+  {
+    "page": "options.html",
+    "chrome_style": true
+  }
+}
